@@ -1,0 +1,225 @@
+/* 全体設定 */
+body {
+    font-family: "Yu Gothic", "Hiragino Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3eaff;
+    line-height: 1.6;
+}
+
+/* ヘッダー */
+header {
+    background-color: #f45de5;
+    padding: 30px;
+    border-bottom: 8px solid #ea07cc;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 40px 0;
+    color: #000000;
+    font-size: 42px;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ナビゲーション */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #7f009f;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #c84bb8;
+}
+
+/* セクション共通（中央寄せ） */
+section {
+    background-color: #fcd1ef;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 3000px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+section h2 {
+    margin-top: 0;
+    color: #4c407f;
+}
+
+/* フォーム */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* 送信ボタン */
+button,
+.submit-btn {
+    padding: 12px;
+    background-color: #c84bb8;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+.submit-btn:hover {
+    background-color: #a83898;
+}
+
+/* プロフィール画像 */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ea07cc;
+    display: block;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* スキル（中央寄せ） */
+.skills {
+    text-align: center;
+}
+
+/* スキル横並び */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+/* スキルカード */
+.item {
+    background-color: #ea07cc;
+    border: 3px solid #ea07cc;
+    border-radius: 10px;
+    padding: 12px 20px;
+    font-weight: bold;
+    color: #ffffff;
+    white-space: nowrap;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* ポートフォリオ画像 */
+.portfolio-items img {
+    width: 340px;
+    height: 220px;
+    object-fit: contain;
+    background-color: #ffffff;
+    border: 5px solid #ea07cc;
+    border-radius: 6px;
+    padding: 5px;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ホバーアニメーション */
+.portfolio-items img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ポートフォリオ横並び（中央寄せ） */
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+/* フッター（ヘッダーと統一デザイン＋文字は細字） */
+footer {
+    background-color: #f45de5;      /* ヘッダーと同じ背景色 */
+    border-top: 8px solid #ea07cc;  /* ヘッダーと同じライン */
+    text-align: center;             /* 中央寄せ */
+    padding: 20px;
+    color: #000000;                 /* ヘッダーと同じ文字色 */
+    font-weight: normal;            /* ← 文字を細字にする */
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2); /* ヘッダーと同じ影 */
+}
+
+/* 課題一覧（works）を既存デザインと統一 */
+.works {
+    background-color: #fcd1ef; /* 他の section と同じ背景色 */
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 3000px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+/* 見出しの色も統一 */
+.works h2 {
+    color: #4c407f; /* 他の h2 と同じ */
+    margin-top: 0;
+}
+
+/* リストの見た目 */
+.works ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.works li {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* リンクの色はナビと統一 */
+.works a {
+    text-decoration: none;
+    color: #7f009f; /* ナビと同じ色 */
+}
+
+.works a:hover {
+    color: #c84bb8; /* ナビの hover と同じ */
+}
