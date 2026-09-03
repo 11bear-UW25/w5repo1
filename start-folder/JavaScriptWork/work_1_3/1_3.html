@@ -4,15 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>関数課題</title>
+    <!-- 課題1のページから見た、cssフォルダへの正しい住所 -->
+    <link rel="stylesheet" href="../../../start-folder/css/style.css">
 </head>
 <body>
-    <h1>関数課題</h1>
-       
-    <!--課題へ戻るリンク-->
-    <p><a href="../../../work.html">課題一覧へ戻る</a></p>
-  
-    <!--JavaScript読み込み-->
-    <script src="start-folder/JavaScriptWork/work_1_3/1_3.js"></script>
+
+    <header>
+        <h1>関数課題</h1>
+        <nav>
+            <ul>
+                <!-- 3つ上の階層（test直下）にある各メインページへの正しいリンク -->
+                <li><a href="../../../work.html">ホーム</a></li>
+                <li><a href="../../../contact.html">お問い合わせ</a></li>
+                <li><a href="../../../work_list.html">課題一覧</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <!-- 3つ上の階層（test直下）にあるwork_list.htmlへ戻る正しいリンク -->
+            <p style="margin-top: 30px;"><a href="../../../work_list.html" style="text-decoration: none; color: #7f009f; font-weight: bold;">← 課題一覧に戻る</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 私のポートフォリオ</p>
+    </footer>
+
+    <!-- ⚠️ JavaScriptファイルを同じフォルダ内（隣）から正しく読み込む記述 -->
+    <script src="1_3.js"></script>
 </body>
 </html>
 
