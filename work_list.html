@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>課題一覧</title>
-    <link rel="stylesheet" href="start-folder/CSS/style.css">
+    <!-- 小文字の css/style.css を確実に読み込む -->
+    <link rel="stylesheet" href="start-folder/css/style.css">
 </head>
 <body>
 
@@ -19,14 +20,16 @@
         </nav>
     </header>
 
-    <section class="works">
-        <h2>課題一覧</h2>
-        <ul>
-            <li><a href="start-folder/JavaScriptWork/work_1_3/1_3.html">課題1</a></li>
-            <li><a href="start-folder/JavaScriptWork/work_1_4/1_4.html">課題2</a></li>
-
-        </ul>
-    </section>
+    <main>
+        <!-- 既存のCSSデザイン（sectionタグ）を100%引き出すためのシンプルな記述 -->
+        <section>
+            <h2>課題提出一覧</h2>
+            <ul style="list-style: none; padding: 0; margin-top: 20px; font-size: 20px; font-weight: bold; line-height: 2.5;">
+                <li><a href="start-folder/JavaScriptWork/work_1_3/1_3.html" style="text-decoration: none; color: #7f009f;">課題1 (1-3)</a></li>
+                <li><a href="start-folder/JavaScriptWork/work_1_4/1_4.html" style="text-decoration: none; color: #7f009f;">課題2 (1-4)</a></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2026 私のポートフォリオ</p>
