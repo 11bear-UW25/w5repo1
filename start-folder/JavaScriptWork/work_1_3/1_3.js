@@ -1,22 +1,19 @@
-// 税抜金額を返す関数
-const getTotalPrice = (price, quantity) => {
-  const total = price * quantity;
-  return `合計金額は${total}円です`;
-};
+// 🚩関数1：getTotalPrice
+// 引数は price（価格）と quantity（個数）
+const getTotalPrice = (price, quantity) => price * quantity; 
 
-// 税込金額を返す関数（10%加算）
-const addTax = total => {
-  return Math.floor(total * 1.1);
-};
+// 🚩関数2：addTax
+// 引数は total（数値の金額）に10%の税金を加えて返す（小数点以下切り捨て）
+const addTax = total => Math.floor(total * 1.1); 
 
-// 税抜金額の計算（数値）
-const totalPriceNumber = 1000 * 2; // 2000
+// --- ここから下は問題文に指定された通りのコードの形（穴埋め完了版） --- 
 
-// 税抜金額の文字列（関数の返り値）
-const totalPriceText = getTotalPrice(1000, 2);
-console.log(`税抜金額は${totalPriceNumber}円です`);
+const total = getTotalPrice(1000, 2); // → 2000 
 
-// 税込金額の計算
-const taxedTotal = addTax(totalPriceNumber);
-console.log(`税込金額は${taxedTotal}円です`);
+// 「税抜金額は2000円です」とコンソールに出力
+console.log(税抜金額は${total}円です); 
 
+const taxedTotal = addTax(total);     // → 2200 
+
+// 「税込金額は2200円です」とコンソールに出力
+console.log(税込金額は${taxedTotal}円です);
