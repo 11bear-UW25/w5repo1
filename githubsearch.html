@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHubユーザー検索</title>
+
+    <link rel="stylesheet" href="start-folder/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>GitHub検索</h1>
+        <nav>
+            <ul>
+                <li><a href="work.html">ホーム</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="work_list.html">課題一覧</a></li>
+                <li><a href="calc.html">電卓</a></li>
+                <li><a href="githubsearch.html">GitHub検索</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>GitHubユーザー情報を取得しよう</h2>
+            
+            <div style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; text-align: left;">
+                <label for="username">GitHubユーザー名：</label>
+                <!-- 小文字の id="username" に統一 -->
+                <input type="text" id="username" placeholder="GitHubユーザー名を入力">
+                
+                <button id="searchBtn" class="submit-btn">検索</button>
+            </div>
+
+            <div id="result" style="margin-top: 30px; background: #ffffff; padding: 25px; border-radius: 6px; border: 3px solid #ea07cc; text-align: left; color: #4c407f;">
+                <p style="margin: 0; text-align: center;">ユーザー名を入力して検索してください。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 私のポートフォリオ</p>
+    </footer>
+
+    <script src="start-folder/JavaScriptWork/githubsearch.js"></script>
+</body>
+</html>
