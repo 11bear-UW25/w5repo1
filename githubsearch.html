@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHubユーザー検索</title>
-
+    <!-- style.css を読み込む -->
     <link rel="stylesheet" href="start-folder/css/style.css">
 </head>
 <body>
@@ -23,18 +23,22 @@
     </header>
 
     <main>
+        <!-- 既存のピンク背景セクションを使用 -->
         <section>
             <h2>GitHubユーザー情報を取得しよう</h2>
             
-            <div style="max-width: 400px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; text-align: left;">
-                <label for="username">GitHubユーザー名：</label>
-                <!-- 小文字の id="username" に統一 -->
-                <input type="text" id="username" placeholder="GitHubユーザー名を入力">
+            <!-- 幅を最大300pxに制限して、中央寄せに配置 -->
+            <div style="max-width: 300px; margin: 0 auto 30px; display: flex; flex-direction: column; gap: 15px; text-align: left;">
+                <label for="username" style="text-align: center; display: block;">GitHubユーザー名：</label>
                 
-                <button id="searchBtn" class="submit-btn">検索</button>
+                <!--background-color: #ffffff; を追加して、入力欄を白く-->
+                <input type="text" id="username" placeholder="ユーザー名を入力" style="width: 100%; max-width: 300px; background-color: #ffffff; display: block; margin: 0 auto; box-sizing: border-box;">
+                
+                <button id="searchBtn" class="submit-btn" style="width: 100%;">検索</button>
             </div>
-
-            <div id="result" style="margin-top: 30px; background: #ffffff; padding: 25px; border-radius: 6px; border: 3px solid #ea07cc; text-align: left; color: #4c407f;">
+            
+            <!-- 検索結果を表示 -->
+            <div id="result" style="margin-top: 20px; background: transparent; padding: 10px; text-align: left; color: #4c407f;">
                 <p style="margin: 0; text-align: center;">ユーザー名を入力して検索してください。</p>
             </div>
         </section>
@@ -44,6 +48,7 @@
         <p>&copy; 2026 私のポートフォリオ</p>
     </footer>
 
+    <!-- JavaScriptファイルへのパス -->
     <script src="start-folder/JavaScriptWork/githubsearch.js"></script>
 </body>
 </html>

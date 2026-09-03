@@ -2,24 +2,42 @@ document.getElementById("searchBtn").addEventListener("click", () => {
     const username = document.getElementById("username").value.trim();
     const resultDiv = document.getElementById("result");
 
-    // 🚩text-align: center; と display: block; を追加して、確実に文字を真ん中に寄せる
+    // ユーザー名が未入力の場合（中央寄せ・背景透明）
     if (!username) {
+        resultDiv.style.background = "transparent";
+        resultDiv.style.boxShadow = "none";
+        resultDiv.style.padding = "10px";
+        resultDiv.style.maxWidth = "none";
+        resultDiv.style.margin = "20px auto";
         resultDiv.innerHTML = `<p style="color: #ea07cc; font-weight: bold; text-align: center; width: 100%; margin: 0; display: block;">ユーザー名を入力してください。</p>`;
         return;
     }
 
-    // 通信中の表示も真ん中に寄せる
+    // 通信中の表示（中央寄せ・背景透明）
+    resultDiv.style.background = "transparent";
+    resultDiv.style.boxShadow = "none";
+    resultDiv.style.padding = "10px";
+    resultDiv.style.maxWidth = "none";
+    resultDiv.style.margin = "20px auto";
     resultDiv.innerHTML = `<p style="text-align: center; width: 100%; margin: 0; display: block;">検索中...</p>`;
 
     // GitHub APIを使ってデータを取得
     fetch(`https://github.com{username}`)
         .then(res => {
             if (!res.ok) {
-                throw new Error("ユーザーが見つかりませんでした。");
+                throw new Error("ユーザーが見つかりませんでした");
             }
             return res.json();
         })
         .then(data => {
+            // 検索成功時：背景を白にし、幅を300pxにして中央寄せ
+            resultDiv.style.background = "#ffffff";
+            resultDiv.style.borderRadius = "8px";
+            resultDiv.style.padding = "20px";
+            resultDiv.style.boxShadow = "0 4px 15px rgba(0,0,0,0.05)";
+            resultDiv.style.maxWidth = "300px";
+            resultDiv.style.margin = "20px auto";
+
             // 結果画面の生成
             resultDiv.innerHTML = `
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 15px; text-align: center;">
@@ -34,12 +52,19 @@ document.getElementById("searchBtn").addEventListener("click", () => {
             `;
         })
         .catch(err => {
-            // エラー時の表示も真ん中に寄せます
+            // エラー発生時：背景を白にし、幅を入力欄と同じ300pxにして中央寄せ
+            resultDiv.style.background = "#ffffff";
+            resultDiv.style.borderRadius = "8px";
+            resultDiv.style.padding = "15px";
+            resultDiv.style.boxShadow = "0 4px 15px rgba(0,0,0,0.05)";
+            resultDiv.style.maxWidth = "300px";
+            resultDiv.style.margin = "20px auto";
+            
             resultDiv.innerHTML = `<p style="color: #ea07cc; font-weight: bold; text-align: center; width: 100%; margin: 0; display: block;">❌ ${err.message}</p>`;
         });
 });
 
-// 入力欄でEnterキーが押されたときも、検索ボタンをクリックした時と同じ処理を動かす
+// 入力欄でEnterキーが押されたとき 検索を動かす
 document.getElementById("username").addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
         document.getElementById("searchBtn").click();
