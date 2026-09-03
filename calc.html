@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電卓</title>
+
+    <link rel="stylesheet" href="start-folder/css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>電卓</h1>
+        <nav>
+            <ul>
+                <li><a href="work.html">ホーム</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+                <li><a href="work_list.html">課題一覧</a></li>
+                <li><a href="calc.html">電卓</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>電卓</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto; text-align: left;">
+                <label for="num1">値1：</label>
+                <input type="number" id="num1" placeholder="数値を入力">
+
+                <label for="operator">演算子：</label>
+                <select id="operator">
+                    <option value="+">+ (足し算)</option>
+                    <option value="-">- (引き算)</option>
+                    <option value="*">* (掛け算)</option>
+                    <option value="/">÷ (割り算)</option>
+                </select>
+
+                <label for="num2">値2：</label>
+                <input type="number" id="num2" placeholder="数値を入力">
+            </div>
+
+            <div style="margin-top: 30px; background: #fff; padding: 20px; border-radius: 6px; box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);">
+                <h3>【計算結果】</h3>
+                <p id="result" style="font-size: 24px; font-weight: bold; color: #4c407f; margin: 0;">両方の数値を入力してください</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 私のポートフォリオ</p>
+    </footer>
+
+    <!-- ⚠️ JavaScriptWorkフォルダの奥にある calc.js を正しく指す記述 -->
+    <script src="start-folder/JavaScriptWork/calc/calc.js"></script>
+</body>
+</html>
